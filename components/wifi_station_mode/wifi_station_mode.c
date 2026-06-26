@@ -9,6 +9,12 @@
 
  #include "wifi_station_mode.h"
 
+ #include "esp_netif.h"
+ #include "esp_event.h"
+ #include "esp_wifi.h"
+ #include "lwip/lwip_napt.h"
+
+
  /**
  * @brief config STA-AP mode
  * 
@@ -32,15 +38,22 @@ void config_sta_ap_mode(){
 /**
  * @brief Station mode configuration
  * 
- * @param SSDI and PWD of the network
+ * @param SSDI of the network
+ * @param PWD of the network
  */
-void station_mode(char *SSID, char *PWD){
-    wifi_config_t sta_cfg = {
-        .sta = {
-            .ssid = SSID,
-            .password = PWD,
-        }
-    };
+void station_mode(const char *SSID, const char *PWD){
+    wifi_config_t sta_cfg = {0};
+
+    strncpy((char *)sta_cfg.sta.ssid,
+            SSID,
+            sizeof(sta_cfg.sta.ssid));
+
+    strncpy((char *)sta_cfg.sta.password,
+            PWD,
+            sizeof(sta_cfg.sta.password));
+
+    sta_cfg.sta.sort_method = WIFI_CONNECT_AP_BY_SIGNAL;
+    sta_cfg.sta.threshold.authmode = WIFI_AUTH_OPEN;
 
     ESP_ERROR_CHECK(
         esp_wifi_set_config(WIFI_IF_STA, &sta_cfg)

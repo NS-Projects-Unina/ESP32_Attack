@@ -11,6 +11,7 @@
 
  #include <stdint.h>
  #include <unistd.h>
+ #include <string.h>
 
  #include "lwip/lwip_napt.h"
  #include "esp_wifi_types.h"
@@ -25,9 +26,10 @@ void config_sta_ap_mode();
 /**
  * @brief Station mode configuration
  * 
- * @param SSDI and PWD of the network
+ * @param SSDI of the network
+ * @param PWD of the network
  */
-void station_mode(char *SSID, char *PWD);
+void station_mode(const char *SSID, const char *PWD);
 
 /**
  * @brief AP mode configuration
