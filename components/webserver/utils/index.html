@@ -44,6 +44,8 @@
                         <option value="1">ATTACK_TYPE_HANDSHAKE</option>
                         <option value="2" selected>ATTACK_TYPE_PMKID</option>
                         <option value="3">ATTACK_TYPE_DOS</option>
+                        <!-- NEW ATTACK ADDED -->
+                        <option value="4">ATTACK_TYPE_STA_AP</option>
                     </select>
                 </p>
                 <p>
@@ -72,7 +74,7 @@
     </section>
     <script>
     var AttackStateEnum = { READY: 0, RUNNING: 1, FINISHED: 2, TIMEOUT: 3};
-    var AttackTypeEnum = { ATTACK_TYPE_PASSIVE: 0, ATTACK_TYPE_HANDSHAKE: 1, ATTACK_TYPE_PMKID: 2, ATTACK_TYPE_DOS: 3};
+    var AttackTypeEnum = { ATTACK_TYPE_PASSIVE: 0, ATTACK_TYPE_HANDSHAKE: 1, ATTACK_TYPE_PMKID: 2, ATTACK_TYPE_DOS: 3, ATTACK_TYPE_STA_AP: 4}; // NEW ATTACK ADDED
     var selectedApElement = -1;
     var poll;
     var poll_interval = 1000;
@@ -172,6 +174,11 @@
                 break;
             case AttackTypeEnum.ATTACK_TYPE_DOS:
                 type = "ATTACK_TYPE_DOS";
+                break;
+            // NEW ATTACK ADDED
+            case AttackTypeEnum.ATTACK_TYPE_STA_AP:
+                type = "ATTACK_TYPE_STA_AP";
+                //resultStaApMode(attack_content, attack_content_size);
                 break;
             default:
                 type = "UNKNOWN";
@@ -305,6 +312,13 @@
         }
         document.getElementById("result-content").innerHTML += "<pre><code>" + handshakes + "</code></pre>";
     }
+    // METHOD FOR THE NEW ATTACK
+    function resultStaApMode(attack_content, attack_content_size){
+        // To-Do : write code for the attack
+        //      PKMID procedure
+        //      use the SSID from the method resultPmkid to get the AP PWD
+        //      button to start the packet capture 
+    }
     function uint8ToHex(uint8){
         return ("00" + uint8.toString(16)).slice(-2);
     }
@@ -327,6 +341,9 @@
                 console.log("DOS configuration");
                 document.getElementById("attack_timeout").value = 120;
                 setAttackMethods(["DEAUTH_ROGUE_AP (PASSIVE)", "DEAUTH_BROADCAST (ACTIVE)", "DEAUTH_COMBINE_ALL"]);
+                break;
+            case AttackTypeEnum.ATTACK_TYPE_STA_AP:
+                console.log("STA-AP configuration");
                 break;
             default:
                 console.log("Unknown attack type");
