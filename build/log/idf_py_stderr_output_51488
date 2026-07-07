@@ -1,0 +1,24 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.4\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build\wifi_analyzer.elf D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.4\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.9.0 on \\.\COM3 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x40088b7d: [0;33mpanic_abort[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/esp_system/panic.c[0m[0m:[1;31m477[0m
+[0m--- 0x40088b45: [0;33mesp_system_abort[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x40089bc2: [0;33mvApplicationStackOverflowHook[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m563[0m
+[0m--- 0x4008afd3: [0;33mvTaskSwitchContext[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3698[0m
+[0m--- 0x40089ccc: [0;33m_frxt_dispatch[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m451[0m
+[0m--- 0x40089c7e: [0;33m_frxt_int_exit[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m246[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x40088b7d: [0;33mpanic_abort[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/esp_system/panic.c[0m[0m:[1;31m477[0m
+[0m--- 0x40088b45: [0;33mesp_system_abort[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/esp_system/port/esp_system_chip.c[0m[0m:[1;31m87[0m
+[0m--- 0x40089bc2: [0;33mvApplicationStackOverflowHook[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m563[0m
+[0m--- 0x4008afd3: [0;33mvTaskSwitchContext[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3698[0m
+[0m--- 0x40089ccc: [0;33m_frxt_dispatch[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m451[0m
+[0m--- 0x40089c7e: [0;33m_frxt_int_exit[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S[0m[0m:[1;31m246[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/Espressif/frameworks/esp-idf-v5.5.4/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m

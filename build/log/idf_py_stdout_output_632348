@@ -1,0 +1,158 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.4\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build\wifi_analyzer.elf D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.4\tools\idf.py'
+I_FAST_FLASɩH(
+B��J���� Partition Table:
+I �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6280
+load:0x40078000,len:15864
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.4 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul  3 2026 17:31:52[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (69) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (75) boot:  3 factory          factory app      00 00 00020000 00100000[0m
+[0;32mI (82) boot:  4 storage          Unknown data     01 82 00120000 00100000[0m
+[0;32mI (88) boot: End of partition table[0m
+[0;32mI (92) boot: Defaulting to factory image[0m
+[0;32mI (95) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=1cc2ch (117804) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=0003cc54 vaddr=3ffb0000 size=033c4h ( 13252) load[0m
+[0;32mI (148) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=95280h (610944) map[0m
+[0;32mI (357) esp_image: segment 3: paddr=000d52a8 vaddr=3ffb33c4 size=00f84h (  3972) load[0m
+[0;32mI (359) esp_image: segment 4: paddr=000d6234 vaddr=40080000 size=181b4h ( 98740) load[0m
+[0;32mI (400) esp_image: segment 5: paddr=000ee3f0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (412) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (412) boot: Disabling RNG early entropy source...[0m
+[0;32mI (422) cpu_start: Multicore app[0m
+[0;32mI (431) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (431) cpu_start: Pro cpu start user code[0m
+[0;32mI (431) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (433) app_init: Application information:[0m
+[0;32mI (437) app_init: Project name:     wifi_analyzer[0m
+[0;32mI (441) app_init: App version:      1[0m
+[0;32mI (445) app_init: Compile time:     Jul  5 2026 19:20:51[0m
+[0;32mI (450) app_init: ELF file SHA256:  2b9ce3913...[0m
+[0;32mI (454) app_init: ESP-IDF:          v5.5.4[0m
+[0;32mI (458) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (462) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (466) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (470) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (476) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (481) heap_init: At 3FFC49E8 len 0001B618 (109 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (491) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 400981B4 len 00007E4C (31 KiB): IRAM[0m
+[0;33mW (504) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (515) spi_flash: detected chip: generic[0m
+[0;32mI (519) spi_flash: flash io: dio[0m
+[0;32mI (523) main_task: Started on CPU0[0m
+[0;32mI (533) main_task: Calling app_main()[0m
+[0;32mI (563) MAIN: ========================================[0m
+[0;32mI (563) MAIN:  ESP32 Wireless Analyzer[0m
+[0;32mI (563) MAIN: ========================================[0m
+[0;32mI (563) WIFI_MANAGER: Initializing Network Stack...[0m
+[0;32mI (583) wifi:wifi driver task: 3ffccc98, prio:23, stack:6656, core=0[0m
+[0;32mI (593) wifi:wifi firmware version: 0947e8b[0m
+[0;32mI (593) wifi:wifi certification version: v7.0[0m
+[0;32mI (593) wifi:config NVS flash: enabled[0m
+[0;32mI (603) wifi:config nano formatting: disabled[0m
+[0;32mI (603) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (603) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (613) wifi:Init management short buffer num: 32[0m
+[0;32mI (613) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (623) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (623) wifi:Init static rx buffer num: 10[0m
+[0;32mI (623) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (633) wifi_init: rx ba win: 6[0m
+[0;32mI (633) wifi_init: accept mbox: 6[0m
+[0;32mI (633) wifi_init: tcpip mbox: 32[0m
+[0;32mI (643) wifi_init: udp mbox: 6[0m
+[0;32mI (643) wifi_init: tcp mbox: 6[0m
+[0;32mI (643) wifi_init: tcp tx win: 5760[0m
+[0;32mI (653) wifi_init: tcp rx win: 5760[0m
+[0;32mI (653) wifi_init: tcp mss: 1440[0m
+[0;32mI (653) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (663) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (673) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (753) wifi:mode : sta (2c:bc:bb:05:24:64) + softAP (2c:bc:bb:05:24:65)[0m
+[0;32mI (753) wifi:enable tsf[0m
+[0;32mI (763) wifi:Total power save buffer number: 16[0m
+[0;32mI (763) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (763) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (763) WIFI_MANAGER: [0m
+[0;32mI (763) WIFI_MANAGER: =========================================[0m
+[0;32mI (763) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (783) WIFI_MANAGER: Access Point Started[0m
+[0;32mI (783) WIFI_MANAGER:  ESP32 Wireless Analyzer[0m
+[0;32mI (793) WIFI_MANAGER: =========================================[0m
+[0;32mI (793) WIFI_MANAGER:  SSID        : ESP32-Research[0m
+[0;32mI (803) WIFI_MANAGER:  PASSWORD    : 12345678[0m
+[0;32mI (803) WIFI_MANAGER:  IP          : 192.168.4.1[0m
+[0;32mI (803) WIFI_MANAGER:  GATEWAY     : 192.168.4.1[0m
+[0;32mI (813) WIFI_MANAGER:  NETMASK     : 255.255.255.0[0m
+[0;32mI (813) WIFI_MANAGER:  CHANNEL     : 1[0m
+[0;32mI (823) WIFI_MANAGER:  MAX CLIENTS : 4[0m
+[0;32mI (823) WIFI_MANAGER: =========================================[0m
+[0;32mI (833) STATION: Station manager initialized[0m
+[0;32mI (833) SCANNER: Scanner initialized[0m
+[0;32mI (833) CAPTURE: Packet capture initialized[0m
+[0;32mI (923) FILESYSTEM: SPIFFS mounted[0m
+[0;32mI (923) FILESYSTEM: Total: 956561 bytes[0m
+[0;32mI (923) FILESYSTEM: Used : 20833 bytes[0m
+[0;32mI (923) WEBSERVER: Starting HTTP server...[0m
+[0;32mI (923) WEBSERVER: HTTP server started[0m
+[0;32mI (923) MAIN: System ready[0m
+[0;32mI (19253) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (19253) wifi:station: 78:2b:46:da:61:aa join, AID=1, bgn, 40U[0m
+[0;32mI (19283) WIFI_MANAGER: Client connected (1) 78:2B:46:DA:61:AA[0m
+[0;32mI (19293) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (19563) wifi:<ba-add>idx:2 (ifx:1, 78:2b:46:da:61:aa), tid:0, ssn:23, winSize:64[0m
+[0;33mW (30003) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (30013) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;33mW (30013) httpd_txrx: httpd_sock_err: error in send : 104[0m
+[0;33mW (30013) httpd_uri: httpd_uri: uri handler execution failed[0m
+[0;33mW (30023) httpd_txrx: httpd_sock_err: error in recv : 104[0m
+[0;32mI (39323) SCANNER: Starting WiFi scan...[0m
+[0;32mI (42173) WIFI_MANAGER: WiFi scan completed[0m
+[0;32mI (42173) SCANNER:  1 | Silvy                            | RSSI= -72 | CH= 8 | WPA2[0m
+[0;32mI (42173) SCANNER:  2 | Wind3 HUB - E71D9E - 2.4         | RSSI= -72 | CH=12 | WPA2[0m
+[0;32mI (42183) SCANNER:  3 | Wind3 HUB 0047 - 2.4             | RSSI= -72 | CH=12 | WPA2[0m
+[0;32mI (42183) SCANNER:  4 |                                  | RSSI= -80 | CH= 8 | WPA2[0m
+[0;32mI (42193) SCANNER:  5 | TIM-92669992                     | RSSI= -86 | CH= 1 | WPA2[0m
+[0;32mI (42203) SCANNER:  6 | FASTWEB-F8BDA9                   | RSSI= -89 | CH= 1 | WPA2[0m
+[0;32mI (42213) SCANNER:  7 | WINDTRE - 9BAACE                 | RSSI= -90 | CH= 8 | UNKNOWN[0m
+[0;32mI (42213) SCANNER:  8 | Vodafone-C69461102               | RSSI= -91 | CH=12 | WPA2[0m
+[0;32mI (42223) SCANNER:  9 | Vodafone-A45445083               | RSSI= -91 | CH=12 | WPA2[0m
+[0;32mI (42233) SCANNER: Scan completed (9 APs)[0m
+[0;32mI (42863) WIFI_MANAGER: Client disconnected (1) 78:2B:46:DA:61:AA[0m
+[0;32mI (42863) wifi:starting SA query procedure with STA(78:2b:46:da:61:aa)[0m
+[0;32mI (42863) wifi:Send SA Query req with transaction id eabd[0m
+[0;32mI (43063) wifi:Send SA Query req with transaction id 6089[0m
+[0;32mI (43263) wifi:Send SA Query req with transaction id 8c78[0m
+[0;32mI (43463) wifi:Send SA Query req with transaction id fd94[0m
+[0;32mI (43663) wifi:Send SA Query req with transaction id ec74[0m
+[0;32mI (43863) wifi:Send SA Query req with transaction id 8265[0m
+[0;32mI (43883) wifi:STA not responded to 6 SA Query attempts, Reset connection sending disassoc[0m
+[0;32mI (43913) wifi:station: 78:2b:46:da:61:aa leave, AID = 1, reason = 209, bss_flags is 756835, bss:0x3ffd9d30[0m
+[0;32mI (43913) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (43913) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (43923) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (43923) WIFI_MANAGER: Client disconnected (1) 78:2B:46:DA:61:AA[0m
+[0;32mI (45993) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (45993) wifi:station: 78:2b:46:da:61:aa join, AID=1, bgn, 40U[0m
+[0;32mI (46013) WIFI_MANAGER: Client connected (1) 78:2B:46:DA:61:AA[0m
+[0;32mI (46023) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (46133) wifi:<ba-add>idx:2 (ifx:1, 78:2b:46:da:61:aa), tid:0, ssn:23, winSize:64[0m

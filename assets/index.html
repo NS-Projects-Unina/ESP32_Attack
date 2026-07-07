@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Wireless Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<main class="shell">
+    <header class="topbar">
+        <div>
+            <h1>ESP32 Wireless Analyzer</h1>
+            <p>Dashboard, scanner, station manager and freeWiFi AP</p>
+        </div>
+        <div class="top-actions">
+            <label class="refresh-control">
+                Auto
+                <input id="autoRefreshToggle" type="checkbox" checked>
+            </label>
+            <label class="refresh-control">
+                Seconds
+                <input id="refreshIntervalInput" type="number" min="1" max="10" value="2">
+            </label>
+            <div class="version" id="version">v--</div>
+        </div>
+    </header>
+
+    <section class="grid">
+        <article class="panel">
+            <h2>Device Status</h2>
+            <dl class="status-grid">
+                <div>
+                    <dt>Scanner</dt>
+                    <dd id="scannerState">Loading</dd>
+                </div>
+                <div>
+                    <dt>Results</dt>
+                    <dd id="resultsState">Loading</dd>
+                </div>
+                <div>
+                    <dt>Scans</dt>
+                    <dd id="scanCounter">0</dd>
+                </div>
+                <div>
+                    <dt>Station</dt>
+                    <dd id="stationState">Loading</dd>
+                </div>
+                <div>
+                    <dt>Capture</dt>
+                    <dd id="captureState">Loading</dd>
+                </div>
+            </dl>
+        </article>
+
+        <article class="panel">
+            <h2>freeWiFi AP</h2>
+            <dl class="status-grid">
+                <div>
+                    <dt>SSID</dt>
+                    <dd id="apSsid">-</dd>
+                </div>
+                <div>
+                    <dt>IP</dt>
+                    <dd id="apIp">-</dd>
+                </div>
+                <div>
+                    <dt>Clients</dt>
+                    <dd id="apClients">0</dd>
+                </div>
+                <div>
+                    <dt>Internet</dt>
+                    <dd id="natState">Disabled</dd>
+                </div>
+            </dl>
+            <p class="station-line" id="natDetails">Connect STA to share connectivity.</p>
+            <div class="actions ap-actions">
+                <button id="freewifiToggleButton" type="button">Attiva AP</button>
+            </div>
+        </article>
+
+        <article class="panel">
+            <h2>STA Manager</h2>
+            <form id="connectForm" class="station-form">
+                <label>
+                    SSID
+                    <input id="ssidInput" maxlength="32" autocomplete="off" required>
+                </label>
+                <label>
+                    Password
+                    <input id="passwordInput" type="password" maxlength="63" autocomplete="off">
+                </label>
+                <div class="actions">
+                    <button type="submit" id="connectButton">Connect</button>
+                    <button type="button" id="disconnectButton" class="secondary">Disconnect</button>
+                </div>
+            </form>
+            <p class="station-line" id="stationDetails">No station connection</p>
+        </article>
+    </section>
+
+    <section class="panel">
+        <div class="toolbar">
+            <h2>Packet Sniffer</h2>
+            <div class="actions">
+                <label class="channel-control">
+                    Mode
+                    <select id="captureModeInput">
+                        <option value="ap">freeWiFi</option>
+                        <option value="all">All</option>
+                    </select>
+                </label>
+                <label class="channel-control">
+                    Channel
+                    <input id="captureChannelInput" type="number" min="1" max="13" value="1">
+                </label>
+                <button id="captureStartButton">Start</button>
+                <button id="captureStopButton" class="secondary">Stop</button>
+                <a id="captureDownloadLink"
+                   class="button secondary disabled"
+                   href="/api/capture/download"
+                   download="wifi_capture.pcap"
+                   aria-disabled="true">Download PCAP</a>
+            </div>
+        </div>
+
+        <dl class="status-grid capture-grid">
+            <div>
+                <dt>Mode</dt>
+                <dd id="captureMode">freeWiFi</dd>
+            </div>
+            <div>
+                <dt>Total</dt>
+                <dd id="captureTotal">0</dd>
+            </div>
+            <div>
+                <dt>Stored</dt>
+                <dd id="captureStored">0</dd>
+            </div>
+            <div>
+                <dt>Dropped</dt>
+                <dd id="captureDropped">0</dd>
+            </div>
+            <div>
+                <dt>PCAP</dt>
+                <dd id="capturePcapBytes">24 B</dd>
+            </div>
+            <div>
+                <dt>Management</dt>
+                <dd id="captureManagement">0</dd>
+            </div>
+            <div>
+                <dt>Control</dt>
+                <dd id="captureControl">0</dd>
+            </div>
+            <div>
+                <dt>Data</dt>
+                <dd id="captureData">0</dd>
+            </div>
+            <div>
+                <dt>AP Traffic</dt>
+                <dd id="captureApTraffic">0</dd>
+            </div>
+            <div>
+                <dt>Uplink</dt>
+                <dd id="captureApUplink">0</dd>
+            </div>
+            <div>
+                <dt>Downlink</dt>
+                <dd id="captureApDownlink">0</dd>
+            </div>
+            <div>
+                <dt>AP Bytes</dt>
+                <dd id="captureApBytes">0 B</dd>
+            </div>
+            <div>
+                <dt>Last RSSI</dt>
+                <dd id="captureRssi">-</dd>
+            </div>
+            <div>
+                <dt>Channel</dt>
+                <dd id="captureChannel">-</dd>
+            </div>
+        </dl>
+        <p class="station-line" id="captureDetails">Capture stopped</p>
+    </section>
+
+    <section class="panel">
+        <div class="toolbar">
+            <h2>WiFi Scan</h2>
+            <button id="scanButton">Scan Networks</button>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SSID</th>
+                        <th>RSSI</th>
+                        <th>Channel</th>
+                        <th>Security</th>
+                    </tr>
+                </thead>
+                <tbody id="scanTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+
+</html>

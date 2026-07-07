@@ -1,0 +1,20 @@
+Command: ninja flash
+[1/6] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/partition_table/partition-table.bin" "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/wifi_analyzer.bin""
+wifi_analyzer.bin binary size 0xd0670 bytes. Smallest app partition is 0x100000 bytes. 0x2f990 bytes (19%) free.
+[2/6] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build" && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.4/components/spiffs/spiffsgen.py 0x100000 "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/assets" "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/storage.bin" --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+[3/6] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D "D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build\bootloader\esp-idf\esptool_py" && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader/bootloader.bin""
+Bootloader binary size 0x6630 bytes. 0x9d0 bytes (9%) free.
+[4/6] No install step for 'bootloader'
+[5/6] Completed 'bootloader'
+[5/6] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.5.4\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.5.4 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.5.4/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build" -P C:/Espressif/frameworks/esp-idf-v5.5.4/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 wifi_analyzer.bin 0x8000 partition_table/partition-table.bin 0xf000 ota_data_initial.bin 0x120000 storage.bin
+esptool.py v4.12.dev2
+Serial port COM3
+Connecting......................................
+
+A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+FAILED: CMakeFiles/flash D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/CMakeFiles/flash 
+C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.5.4\components\esptool_py && C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.5.4 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.5_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.5.4/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D "WORKING_DIRECTORY=D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build" -P C:/Espressif/frameworks/esp-idf-v5.5.4/components/esptool_py/run_serial_tool.cmake"
+ninja: build stopped: subcommand failed.
