@@ -1,4 +1,4 @@
-# ESP32 Wireless Analyzer
+# ESP32_Attack_Platform
 
 Target hardware: ESP32-WROOM-32 DevKit V1.
 
@@ -63,9 +63,20 @@ e data frame sul canale selezionato manualmente.
 - `POST /api/capture/stop`: ferma lo sniffer.
 - `GET /api/capture/download`: scarica la capture corrente come `wifi_capture.pcap`.
 
+## Prerequisiti
+
+- <a href='https://dl.espressif.com/dl/esp-idf/'>ESP-IDF v5.5.4</a>
+- Python v3.11.2
+
 ## Build
 
 La build ESP-IDF e' stata verificata con target `esp32` e genera:
 
 - `build/wifi_analyzer.bin`
 - `build/storage.bin`
+
+Istruzioni per la build:
+
+- 'idf.py build'
+- 'idf.py flash'
+- 'idf.py monitor'
