@@ -77,6 +77,6 @@ La build ESP-IDF e' stata verificata con target `esp32` e genera:
 
 Istruzioni per la build:
 
-- 'idf.py build'
-- 'idf.py flash'
-- 'idf.py monitor'
+- `idf.py build`
+- `idf.py flash`
+- `idf.py monitor`
