@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/CMakeFiles/bootloader"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/CMakeFiles/bootloader.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

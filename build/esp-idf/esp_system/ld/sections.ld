@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: D:\Documenti\UNI\Magistrale\Network Security\Elaborato\NS_git_repo\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 

@@ -1876,7 +1876,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -S"D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer" -B"D:\Documenti\UNI\Magistrale\Network Security\Elaborato\wifi_analyzer\build"
+  command = C:\Espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -S"D:\Documenti\UNI\Magistrale\Network Security\Elaborato\NS_git_repo" -B"D:\Documenti\UNI\Magistrale\Network Security\Elaborato\NS_git_repo\build"
   description = Re-running CMake...
   generator = 1
 

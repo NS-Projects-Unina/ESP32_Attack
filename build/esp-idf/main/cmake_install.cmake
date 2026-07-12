@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/main
+# Install script for directory: D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

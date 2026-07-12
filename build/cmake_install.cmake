@@ -1,4 +1,4 @@
-# Install script for directory: D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer
+# Install script for directory: D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/esp-idf/cmake_install.cmake")
+  include("D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/esp-idf/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -57,6 +57,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

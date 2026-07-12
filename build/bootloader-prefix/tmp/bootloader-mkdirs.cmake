@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Espressif/frameworks/esp-idf-v5.5.4/components/bootloader/subp
   file(MAKE_DIRECTORY "C:/Espressif/frameworks/esp-idf-v5.5.4/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader"
-  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix"
-  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/tmp"
-  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp"
-  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src"
-  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader"
+  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix"
+  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/tmp"
+  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src"
+  "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/wifi_analyzer/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/Documenti/UNI/Magistrale/Network Security/Elaborato/NS_git_repo/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
